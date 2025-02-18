@@ -23,6 +23,7 @@ def main(target: click.DateTime) -> None:
     TIME is a string representing a date and time in the format
     'HH:MM:SS' in the local timezone.
     """
+    pyautogui.PAUSE = 0.0 # No delay
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
     local_time = datetime.fromtimestamp(time.time())
